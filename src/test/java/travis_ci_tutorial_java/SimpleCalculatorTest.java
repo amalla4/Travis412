@@ -24,11 +24,16 @@ public class SimpleCalculatorTest {
 		assertEquals(calc.multiply(4,2), 8);
 	}
 
-	//add tets to test divide and divide by zero
 	@Test
 	public void testDivide(){
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.divide(4,2), 2);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testDivideByZero(){
+		SimpleCalculator calc = new SimpleCalculator();
+		calc.divide(4,0);
 	}
 	
 }
