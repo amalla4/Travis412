@@ -23,5 +23,12 @@ public class SimpleCalculatorTest {
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.multiply(4,2), 8);
 	}
+
+	//add tets to test divide and divide by zero
+	@Test
+	public void testDivide(){
+		SimpleCalculator calc = new SimpleCalculator();
+		assertEquals(calc.divide(4,2), 2);
+	}
 	
 }
